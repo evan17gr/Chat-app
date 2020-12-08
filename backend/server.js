@@ -1,16 +1,20 @@
 const express = require('express');
-const server = require('http');
-const io = require('socket.io');
-const { createServer } = require('tls');
+const http = require('http');
+const { ppid } = require('process');
+const socketIo = require('socket.io');
 
 const app = express();
 
-const server = createServer(app);
+const server = http.createServer(app);
+
+const io = socketIo(server);
 
 const PORT = 8080;
 
-app.get('/', (req, res) => {
-    res.send('Hello world');
+app.use("/",express.static("public"));
+
+io.on('connection', (socket) => {
+    console.log( 'A user connected' )
 });
 
 app.listen(PORT, () => {

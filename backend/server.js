@@ -11,10 +11,10 @@ const io = socketIo(server);
 
 const PORT = 8080;
 
-app.use("/",express.static("public"));
+app.use('/', express.static('public'));
 
 io.on('connection', (socket) => {
-    console.log( 'A user connected' )
+    console.log('A user connected');
 });
 
 app.listen(PORT, () => {

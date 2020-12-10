@@ -1,6 +1,5 @@
 const express = require('express');
 const http = require('http');
-const { ppid } = require('process');
 const socketIo = require('socket.io');
 
 const app = express();
@@ -11,7 +10,9 @@ const io = socketIo(server);
 
 const PORT = 8080;
 
-app.use('/', express.static('public'));
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
 
 io.on('connection', (socket) => {
     console.log('A user connected');

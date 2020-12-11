@@ -1,6 +1,25 @@
+@import 'variables';
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+.light-theme {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+.wholeNav {
+    width: 100vw;
+    height: 5vw;
+    background-color: red;
+    display: flex;
 }

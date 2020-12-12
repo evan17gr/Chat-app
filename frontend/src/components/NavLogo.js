@@ -4,8 +4,8 @@ import '../sass/navbar.scss';
 const NavLogo = () => {
     return (
         <div className="logoDiv">
-            <i className="logo far fa-comment-dots"></i>
-            <h2 className="logoText">Chatster</h2>
+            <i className="far fa-comment-dots"></i>
+            <h1>Chatster</h1>
         </div>
     );
 };

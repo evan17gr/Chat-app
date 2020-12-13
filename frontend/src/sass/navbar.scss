@@ -2,30 +2,28 @@
 
 .logoDiv {
     display: flex;
-    width: 30%;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 1vw;
     color: $green;
 
     h1 {
-        font-size: 3.4vw;
+        font-size: 72px;
         font-family: 'Montserrat', sans-serif;
     }
 
     i {
-        padding-right: 0.5vw;
-        padding-bottom: 1.5vw;
-        font-size: 2.2vw;
+        padding-right: 5px;
+        padding-bottom: 33px;
+        font-size: 40px;
     }
 }
 
 .navbar {
     display: flex;
-    width: 70%;
+    width: 100%;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-bottom: 1vw;
+    padding-bottom: 14px;
 }
 
 .mobileNav {
@@ -64,8 +62,6 @@
     height: 100%;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-bottom: 0.5vw;
-    padding-right: 3vw;
     list-style: none;
 
     @media screen and (max-width: 768px) {
@@ -74,9 +70,9 @@
 
     .link {
         text-decoration: none;
-        padding-right: 4vw;
+        padding-right: 6vw;
         cursor: pointer;
-        font-size: 1.5vw;
+        font-size: 30px;
         color: $secondaryColor;
         transition: color 1s ease-in-out;
 

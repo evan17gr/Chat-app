@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBarItem from './NavBarItem';
 import '../sass/navbar.scss';
 import '../sass/togglebutton.scss';
 
 const NavBar = () => {
+    const [theme, setTheme] = useState('dark');
+
+    const changeTheme = () => {
+        if (theme === 'dark') {
+            setTheme('light');
+            document.body.classList.add('light-theme');
+        } else {
+            setTheme('dark');
+            document.body.classList.add('dark-theme');
+        }
+    };
+
     return (
         <div className="navbar">
             <ul className="desktopNav">
@@ -11,7 +23,7 @@ const NavBar = () => {
                 <NavBarItem text="About"></NavBarItem>
                 <NavBarItem text="Contact us"></NavBarItem>
                 <label className="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" onClick={changeTheme} />
                     <span className="slider round"></span>
                 </label>
             </ul>

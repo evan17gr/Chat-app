@@ -7,10 +7,17 @@
     box-sizing: border-box;
 }
 
+html {
+    @media screen and (max-width: 1024px) {
+        overflow-x: hidden;
+    }
+}
+
 body {
     background-color: $primaryColor;
     color: $secondaryColor;
     font-family: sans-serif;
+    overflow-y: hidden;
     overflow-x: hidden;
 
     @media screen and (max-width: 1024px) {
@@ -26,6 +33,10 @@ body {
 .light-theme {
     background-color: $secondaryColor;
     color: $primaryColor;
+
+    html {
+        background-color: $secondaryColor;
+    }
 
     .wholeNav {
         color: $primaryColor;

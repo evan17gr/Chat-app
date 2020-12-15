@@ -36,24 +36,6 @@
     }
 }
 
-.light-theme {
-    background-color: $secondaryColor;
-    color: $primaryColor;
-
-    input {
-        background-color: $primaryColor;
-
-        &::placeholder {
-            color: $secondaryColor;
-        }
-    }
-}
-
-.dark-theme {
-    background-color: $primaryColor;
-    color: $secondaryColor;
-}
-
 .navbar {
     display: flex;
     width: 100%;

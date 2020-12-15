@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBarItem from './NavBarItem';
 import '../sass/navbar.scss';
 import '../sass/togglebutton.scss';
 
-const NavBar = () => {
+const NavBar = ({ selectedTheme }) => {
     const [theme, setTheme] = useState('dark');
 
     const changeTheme = () => {
         if (theme === 'dark') {
             setTheme('light');
-            document.body.classList.add('light-theme');
         } else {
             setTheme('dark');
-            document.body.classList.add('dark-theme');
         }
     };
+
+    useEffect(() => {
+        selectedTheme(theme);
+    }, [theme]);
 
     return (
         <div className="navbar">
@@ -32,7 +34,7 @@ const NavBar = () => {
                 <NavBarItem icon="fas fa-info-circle"></NavBarItem>
                 <NavBarItem icon="fas fa-address-book"></NavBarItem>
                 <label className="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" onClick={changeTheme} />
                     <span className="slider round"></span>
                 </label>
             </ul>

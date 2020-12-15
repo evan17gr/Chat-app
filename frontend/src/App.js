@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './sass/index.scss';
 import NavBar from './components/NavBar';
 import NavLogo from './components/NavLogo';
@@ -10,15 +10,26 @@ import {
 } from 'react-router-dom';
 
 function App() {
+    const [theme2, setTheme2] = useState(null);
+
     return (
         <Router>
-            <div className="wholeNav">
-                <NavLogo></NavLogo>
-                <NavBar></NavBar>
+            <div
+                className={
+                    theme2 === 'dark' ? 'dark-theme' : 'light-theme'
+                }
+                id="main"
+            >
+                <div className="wholeNav">
+                    <NavLogo></NavLogo>
+                    <NavBar
+                        selectedTheme={(theme) => setTheme2(theme)}
+                    ></NavBar>
+                </div>
+                <Switch>
+                    <Route path="/" component={Home} />
+                </Switch>
             </div>
-            <Switch>
-                <Route path="/" component={Home} />
-            </Switch>
         </Router>
     );
 }

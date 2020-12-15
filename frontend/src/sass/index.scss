@@ -18,9 +18,58 @@ body {
     }
 }
 
+#main {
+    width: 100vw;
+    height: 100%;
+}
+
 .light-theme {
     background-color: $secondaryColor;
     color: $primaryColor;
+
+    .wholeNav {
+        color: $primaryColor;
+    }
+
+    .container {
+        .left-side {
+            .large-text {
+                .right {
+                    color: $darkgreen;
+                }
+            }
+        }
+    }
+
+    input {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+
+        &::placeholder {
+            color: $secondaryColor;
+        }
+    }
+
+    .section {
+        .inputs {
+            input {
+                &::placeholder {
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    .desktopNav {
+        .link {
+            color: $primaryColor;
+            transition: color 1s ease-in-out;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
 }
 
 .dark-theme {
@@ -32,6 +81,6 @@ body {
     width: 90%;
     height: 90px;
     display: flex;
-    margin: 10px 40px;
+    margin: 0 40px 10px 40px;
     justify-content: center;
 }

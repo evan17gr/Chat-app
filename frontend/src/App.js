@@ -3,6 +3,7 @@ import './sass/index.scss';
 import NavBar from './components/NavBar';
 import NavLogo from './components/NavLogo';
 import Home from './pages/Home';
+import Room from './pages/Room';
 import {
     BrowserRouter as Router,
     Switch,
@@ -27,7 +28,8 @@ function App() {
                     ></NavBar>
                 </div>
                 <Switch>
-                    <Route path="/" component={Home} />
+                    <Route path="/" component={Home} exact />
+                    <Route path="/room" component={Room} />
                 </Switch>
             </div>
         </Router>

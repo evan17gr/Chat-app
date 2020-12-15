@@ -3,6 +3,7 @@
 .container {
     display: flex;
     margin: 50px 0 0 0;
+    height: 70%;
     justify-content: center;
 
     @media screen and (max-width: 1024px) {
@@ -40,8 +41,18 @@
         margin-bottom: 5vw;
     }
 
+    @media screen and (max-width: 768px) {
+        padding-bottom: 10vw;
+    }
+
     @media screen and (max-width: 500px) {
         width: 90%;
+        padding-bottom: 15vw;
+    }
+
+    @media screen and (max-width: 410px) {
+        width: 90%;
+        padding-bottom: 20vw;
     }
 }
 
@@ -126,7 +137,7 @@
 
 .large-text {
     width: 50%;
-    height: 23%;
+    height: 18%;
     color: $darkgreen;
 
     @media screen and (max-width: 1024px) {

@@ -1,0 +1,16 @@
+@import 'variables';
+
+#container {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    margin: 4vw 40px;
+    overflow: visible;
+}
+
+#titleDiv {
+    h1 {
+        font-size: 6vw;
+    }
+}

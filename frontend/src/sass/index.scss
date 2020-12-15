@@ -7,21 +7,16 @@
     box-sizing: border-box;
 }
 
-html {
-    @media screen and (max-width: 1024px) {
-        overflow-x: hidden;
-    }
-}
-
 body {
     background-color: $primaryColor;
     color: $secondaryColor;
     font-family: sans-serif;
-    overflow-y: hidden;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     @media screen and (max-width: 1024px) {
         overflow: visible;
+        overflow-x: hidden;
     }
 }
 
@@ -34,31 +29,17 @@ body {
     background-color: $secondaryColor;
     color: $primaryColor;
 
-    html {
-        background-color: $secondaryColor;
-    }
-
     .wholeNav {
         color: $primaryColor;
     }
 
-    .container {
-        .left-side {
-            .large-text {
-                .right {
-                    color: $darkgreen;
-                }
-            }
-        }
+    .right {
+        color: $darkgreen;
     }
 
     input {
         background-color: $primaryColor;
         color: $secondaryColor;
-
-        &::placeholder {
-            color: $secondaryColor;
-        }
     }
 
     .section {
@@ -86,6 +67,10 @@ body {
 .dark-theme {
     background-color: $primaryColor;
     color: $secondaryColor;
+
+    .right {
+        color: $darkgreen;
+    }
 }
 
 .wholeNav {

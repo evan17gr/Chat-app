@@ -12,17 +12,11 @@ body {
     color: $secondaryColor;
     font-family: sans-serif;
     overflow-x: hidden;
-    overflow-y: hidden;
-
-    @media screen and (max-width: 1024px) {
-        overflow: visible;
-        overflow-x: hidden;
-    }
 }
 
 #main {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
 }
 
 .light-theme {

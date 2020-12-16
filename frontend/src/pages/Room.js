@@ -4,22 +4,42 @@ import '../sass/room.scss';
 const Room = () => {
     return (
         <div id="container">
-            <div id="tileDiv">
+            <div id="titleDiv">
                 <h1>Room name</h1>
             </div>
-            <div>
+            <div id="sides">
                 <div id="left">
-                    <div id="active-users"></div>
-                    <div id="users"></div>
+                    <div id="active-users">
+                        <h2>Active users</h2>
+                    </div>
+                    <div id="users">
+                        <div id="user">
+                            <i className="fas fa-user"></i>
+                            <p>nicolas12</p>
+                            <i className="fas fa-circle"></i>
+                        </div>
+                        <div id="user">
+                            <i className="fas fa-user"></i>
+                            <p>nicolas12</p>
+                            <i className="fas fa-circle"></i>
+                        </div>
+                        <div id="user">
+                            <i className="fas fa-user"></i>
+                            <p>nicolas12</p>
+                            <i className="fas fa-circle"></i>
+                        </div>
+                    </div>
                 </div>
                 <div id="right">
                     <div id="messages">
                         <div id="message-div">
-                            <p id="message"></p>
+                            <p id="message">
+                                Hey how is everyone doing?
+                            </p>
                         </div>
                         <p id="sent-by"></p>
                     </div>
-                    <div>
+                    <div id="send-message">
                         <input
                             type="text"
                             placeholder="Send a message"

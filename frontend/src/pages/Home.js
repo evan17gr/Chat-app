@@ -13,7 +13,7 @@ const Home = () => {
                     input="Enter your name"
                     button="Join a room"
                 ></Section>
-                <LargeText right="true" text="tster"></LargeText>
+                <LargeText right="true" text="ster"></LargeText>
             </div>
             <div className="right-side">
                 <LargeText text="Chat"></LargeText>

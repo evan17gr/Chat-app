@@ -9,9 +9,12 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
+// import io from 'socket.io-client';
 
 function App() {
     const [theme2, setTheme2] = useState(null);
+
+    // const socket = io('http://localhost:8080');
 
     return (
         <Router>
@@ -29,7 +32,7 @@ function App() {
                 </div>
                 <Switch>
                     <Route path="/" component={Home} exact />
-                    <Route path="/room" component={Room} />
+                    <Route path="/:roomName" component={Room} />
                 </Switch>
             </div>
         </Router>

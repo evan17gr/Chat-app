@@ -1,11 +1,14 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import '../sass/room.scss';
 
 const Room = () => {
+    let { roomName } = useParams();
+
     return (
         <div id="container">
             <div id="titleDiv">
-                <h1>Room name</h1>
+                <h1>#{roomName}</h1>
             </div>
             <div id="sides">
                 <div id="left">

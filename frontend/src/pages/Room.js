@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import io from 'socket.io-client';
 import '../sass/room.scss';
 
 const Room = () => {
     let { roomName } = useParams();
+
+    useEffect(() => {
+        const socket = io('http://localhost:8080/');
+        socket.on('connect', () => {
+            console.log(socket.id);
+        });
+    });
 
     return (
         <div id="container">

@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-    socket.send(`A user connected ${socket.id}`);
+    socket.send(`A user connected to the socket ${socket.id}`);
 });
 
 app.listen(PORT, () => {
-    console.log(`Successful server setup on port ${PORT}`);
+    console.log(`Successful server setup on ports ${PORT}`);
 });

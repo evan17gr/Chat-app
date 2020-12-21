@@ -7,7 +7,7 @@ const Room = () => {
     let { roomName } = useParams();
 
     useEffect(() => {
-        const socket = io('http://localhost:8080/');
+        const socket = io('http://localhost:8080');
         socket.on('connect', () => {
             console.log(socket.id);
         });

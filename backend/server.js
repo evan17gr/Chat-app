@@ -1,24 +1,14 @@
 const express = require('express');
-const cors = require('cors');
+const socketio = require('socket.io');
 const http = require('http');
 
 const app = express();
 
 const server = http.createServer(app);
+const io = socketio(server);
 
-const io = require('socket.io')(server, {
-    cors: {
-        origin: 'http://localhost:8080',
-        methods: ['GET', 'POST'],
-    },
-});
+const PORT = 5000;
 
-const PORT = 8080;
-
-io.on('connection', (socket) => {
-    socket.send(`A user connected  ${socket.id}`);
-});
-
-app.listen(PORT, () => {
-    console.log(`Successful server setup on port ${PORT}`);
+server.listen(PORT, () => {
+    console.log(`Server has started on port ${PORT}`);
 });
